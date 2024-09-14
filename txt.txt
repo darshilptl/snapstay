@@ -1,0 +1,17 @@
+
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: process.env.NODE_ENV === 'production'
+          ? 'https://snapstay.vercel.app/api/:path*'
+          : 'http://localhost:2034/:path*',
+      },
+    ];
+  },
+
+
+
+ install.js :  
+ 
+  
